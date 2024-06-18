@@ -1,0 +1,45 @@
+2A) 
+A swarm or fleet of Unmanned Aerial Vehicles (UAVs) is a set of aerial robots i.e., drones that work together.
+The flight of the drones is controlled either manually, i.e. by remote control operations, or autonomously by using processors deployed on the drones.
+
+
+2B) 
+Use the Arduino IDE with ESP8266 support to write program  for the ESP8266.
+Utilize the ESP8266WiFi library for WiFi connectivity or the ESP8266HTTPClient library for HTTP communication, depending on your application.
+Write code to connect to your WiFi network and handle data communication protocols such as HTTP, etc
+----------------------------------------------------------------------------------------
+THIS IS A CODE WHICH I HAD USED IN MY EARLIER PROGRAM WHILE MAKING DRONE 
+----------------------------------------------------------------------------------------
+#include <ESP8266WiFi.h>
+
+const char* ssid = "your_SSID";
+const char* password = "your_PASSWORD";
+
+void setup() {
+  Serial.begin(115200);
+  delay(10);
+
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println("WiFi connected");
+}
+
+void loop() {...}
+-----------------------------------------------------------------------------------------
+
+
+2C)
+- Autonomous Flight and Landing Capabilities: Ensuring the UAVs can take off, navigate autonomously, and land safely is crucial.
+To operate without human intervention, essential for tasks such as search and rescue missions where immediate response and minimal human risk are our main priorities. 
+- Object Detection and Recognition: Equipping the UAVs with high-resolution cameras and machine learning algorithms for real-time object detection and recognition in varied environmental conditions 
+- Communication and Coordination Between our UAVs: Implementing swarm communication codes that enable all the drones to share information about detected targets using technologies.
+- Weather Durability: Designing drones that can sustain to weather conditions, such as rain, wind, and varying heat conditions.
+
+
+
+
+
+
